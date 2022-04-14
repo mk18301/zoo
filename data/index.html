@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zoo</title>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body id="zoo">
+        
+        <div contenteditable="false" class="zooField">
+            <h1 id="Zooname" label for="name" class="title">World Zoo</h1>
+            <div class="zooInfo">
+            <p id="Zoocapacity" label for="capacity">Capacity:250</p>
+            <p id="numberofanimals" label for="animalNumber">Number of animals:4</p>
+            <p id="numberofguest" label for="guestNumber">Number of guest:57</p>  
+            <button id="myBtn" >Admit Guest</button> 
+            <button id="addAnimal">Add Animal</button>
+            </div>
+        </div>
+     
+        <div class="animalInfo">
+        <h2 id="animals">
+            <h1 id="Animallist" class="title">Animals: </h1>
+            <!--Added a animal list with a find by name function and on key up event handler-->
+            <ul id="animalList">
+        </h2>
+        </div> 
+
+
+        
+        <table>
+            <tr>
+                <th>Animal</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Weight</th>
+                <th>IsPregnant</th>
+            </tr>
+            <tr>
+                <td>Platypus</td>
+                <td>Perry</td>
+                <td>2</td>
+                <td>Female</td>
+                <td>3.2</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td>Hummingbird</td>
+                <td>Harry</td>
+                <td>2</td>
+                <td>Male</td>
+                <td>3.2</td>
+                <td>False</td>
+            </tr>
+            <tr>
+                <td>Shark</td>
+                <td>Sherry</td>
+                <td>2</td>
+                <td>Female</td>
+                <td>852</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td>Chimpanzee</td>
+                <td>Cherry</td>
+                <td>2</td>
+                <td>Female</td>
+                <td>3.2</td>
+                <td>True</td>
+            </tr>
+            
+        </table>
+          
+        
+
+        <div id="submit">
+                <!--Created both an animal and guest submit form-->
+            <form action=""  onsubmit="guestSubmit()">
+            <fieldset>
+                <p>Guest submit</p>
+                <Label for="first name">first name
+                    <input type = "text" id= "first name">
+                </Label><br>
+                <Label for="last name">last name
+                    <input type = "text" id= "last name">
+                </Label><br>
+                <Label for="phone">phone number
+                    <input type = "text" id= "phone">
+                </Label><br>
+                <input type="submit" value="Submit" id="guestButton">
+            </fieldset>
+            </form>
+
+            <form action=""  onsubmit="addAnimals()">
+            <label for="type">Type:
+                <select Name="Animal_listbox" Size="Number_of_options" id="Animal_listbox"  onChange='Choice();'>  
+                    <option></option>  
+                    <option value="1"> Platypus </option>  
+                    <option value="2"> Hummingbird </option>  
+                    <option value="3"> Chimpanzee </option>  
+                    <option value="4"> Shark </option>  
+                </select>  
+            </label><br><br>
+            <fieldset id= "animalsubmit">
+                <p>Add an animal</p>
+                <label for="type2">Type: 
+                    <input type="text" id="type2" name="type2" value="">
+                </label><br><br>
+                <label for="animalname">Name: 
+                    <input type="text" id="animalname" name="animalname" value="">
+                </label><br><br>
+                <label for="age">Age:
+                    <input type="number" id="age" name="age" value="">
+                </label><br><br>
+                <label>Gender:
+                     <input type="text" name="gender" id="gender" value="">
+                </label><br><br>
+                <label for="name">Weight:
+                    <input type="text" id="weight" name="weight" value="">
+                </label><br><br>
+                <label>Is Pregnant?:
+                     <input type="text" name="pregnant" id="pregnant" value="">
+                </label><br>
+                <input type="submit" value="Submit">
+                <div>
+                    <ul id="listcontent"></ul>
+                </div>
+            </fieldset>
+            </form>
+    </body>
+</html>
+
